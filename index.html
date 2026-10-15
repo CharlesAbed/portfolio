@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Charles ABED, ancien étudiant en pharmacie en reconversion dans le numérique, avec pour objectif le pilotage de projets de santé numérique." data-i18n-content="metaDescription">
+    <meta name="theme-color" content="#15803D">
+    <title>Charles ABED | Pharmacie &amp; santé numérique</title>
+    <link rel="icon" type="image/svg+xml" href="/caducee-pharmaceutique.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+</head>
+
+<body data-page="home">
+    <a class="skip-link" href="#contenu" data-i18n="skipLink">Aller au contenu</a>
+    <div id="react-root"></div>
+
+    <header class="site-header">
+        <nav class="navigation container" aria-label="Navigation principale" data-i18n-aria="navigationLabel">
+            <a class="brand" href="#accueil" aria-label="Charles ABED — retour à l'accueil" data-i18n-aria="brandLabel">
+                <img class="brand-mark" src="/caducee-pharmaceutique.svg" alt="" width="28" height="34">
+                <span class="brand-name">Charles <strong>ABED</strong></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu" data-i18n-aria="menuOpen">
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#menu"/></svg>
+            </button>
+
+            <div class="nav-panel" id="menu-principal">
+                <ul class="nav-links">
+                    <li><a href="#parcours" data-i18n="navJourney">Parcours</a></li>
+                    <li><a href="#objectif" data-i18n="navGoal">Objectif</a></li>
+                    <li><a href="#competences" data-i18n="navSkills">Compétences</a></li>
+                    <li><a href="#experiences" data-i18n="navExperience">Expériences</a></li>
+                    <li><a href="#formation" data-i18n="navEducation">Formation</a></li>
+                    <li><a href="#projets" data-i18n="navProjects">Projets</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="language-switch" role="group" aria-label="Choix de la langue" data-i18n-aria="languageGroup">
+                        <button type="button" data-language="fr" aria-pressed="true" aria-label="Passer le site en français" data-i18n-aria="switchToFrench">FR</button>
+                        <button type="button" data-language="en" aria-pressed="false" aria-label="Passer le site en anglais" data-i18n-aria="switchToEnglish">EN</button>
+                    </div>
+                    <a class="button button-primary button-small" href="#contact" data-i18n="navContact">Me contacter</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <!-- ============ ACCUEIL ============ -->
+        <section class="hero" id="accueil">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="status-badge" data-hero>
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span data-i18n="heroStatus">Recherche d'alternance · janvier → août 2027</span>
+                    </p>
+
+                    <h1 data-hero>Charles <span>ABED</span></h1>
+
+                    <p class="hero-role" data-hero>
+                        <span class="text-health" data-i18n="heroRoleFrom">De la pharmacie</span>
+                        <span data-i18n="heroRoleTo">au pilotage de projets de</span>
+                        <span class="text-digital" data-i18n="heroRoleDigital">santé numérique</span>
+                    </p>
+
+                    <p class="hero-lead" data-hero data-i18n="heroLead">
+                        Après plusieurs années d'études en pharmacie et plusieurs expériences
+                        en officine et à l'hôpital, je me forme au numérique à Epitech Nantes.
+                        Mon objectif : faire le lien entre les professionnels de santé et les
+                        équipes techniques pour mener à bien des projets de santé numérique.
+                    </p>
+
+                    <div class="hero-actions" data-hero>
+                        <a class="button button-primary" href="#projets">
+                            <span data-i18n="ctaProjects">Voir mes projets</span>
+                            <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg>
+                        </a>
+                        <a class="button button-secondary" href="#contact" data-i18n="ctaContact">Me contacter</a>
+                    </div>
+
+                    <ul class="hero-meta" data-hero>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="/icons.svg#map-pin"/></svg>
+                            <span>Nantes, France</span>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="/icons.svg#languages"/></svg>
+                            <span data-i18n="heroLanguages">Français · Anglais C2 · Espagnol B1</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual" data-hero aria-hidden="true">
+                    <div class="visual-card">
+                        <div class="visual-grid"></div>
+                        <svg class="visual-ecg" viewBox="0 0 400 80" preserveAspectRatio="none">
+                            <path d="M0 40 H120 L135 40 L145 18 L158 64 L170 8 L182 52 L192 40 H400"/>
+                        </svg>
+                        <div class="visual-emblem">
+                            <img src="/caducee-pharmaceutique.svg" alt="" width="120" height="144">
+                        </div>
+                        <div class="visual-chip chip-health">
+                            <svg class="icon"><use href="/icons.svg#pill"/></svg>
+                            <span>
+                                <strong data-i18n="chipHealthTitle">Pharmacie</strong>
+                                <small>2018 – 2025</small>
+                            </span>
+                        </div>
+                        <div class="visual-chip chip-digital">
+                            <svg class="icon"><use href="/icons.svg#code"/></svg>
+                            <span>
+                                <strong data-i18n="chipDigitalTitle">Numérique</strong>
+                                <small>Epitech · 2026 →</small>
+                            </span>
+                        </div>
+                        <div class="visual-chip chip-goal">
+                            <svg class="icon"><use href="/icons.svg#target"/></svg>
+                            <span>
+                                <strong data-i18n="chipGoalTitle">Santé numérique</strong>
+                                <small data-i18n="chipGoalText">Pilotage de projets</small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <dl class="key-figures" data-reveal>
+                    <div class="figure">
+                        <dt data-i18n="figureOneLabel">en sciences pharmaceutiques (DFGSP)</dt>
+                        <dd data-i18n="figureOneValue">Bac+3</dd>
+                    </div>
+                    <div class="figure">
+                        <dt data-i18n="figureTwoLabel">expériences en officine et à l'hôpital</dt>
+                        <dd>4</dd>
+                    </div>
+                    <div class="figure">
+                        <dt data-i18n="figureThreeLabel">de formation à Epitech (Pré-MSc + MBA)</dt>
+                        <dd data-i18n="figureThreeValue">3 ans</dd>
+                    </div>
+                    <div class="figure">
+                        <dt data-i18n="figureFourLabel">niveau d'anglais</dt>
+                        <dd>C2</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ============ PARCOURS ============ -->
+        <section class="section" id="parcours">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="journeyKicker">Qui suis-je ?</p>
+                    <h2 data-i18n="journeyTitle">Deux cultures, un même objectif</h2>
+                    <p class="section-lead" data-i18n="journeyLead">
+                        Mes années en pharmacie m'ont appris la rigueur, le sens du patient
+                        et la réalité du terrain. Le numérique me donne aujourd'hui les outils
+                        pour améliorer ce terrain. Je veux réunir les deux.
+                    </p>
+                </header>
+
+                <ol class="journey">
+                    <li class="journey-step step-health" data-reveal>
+                        <span class="journey-marker" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#graduation"/></svg>
+                        </span>
+                        <p class="journey-date">2018 – 2025</p>
+                        <h3 data-i18n="journeyStepOneTitle">Études de pharmacie</h3>
+                        <p data-i18n="journeyStepOneText">Université de Nantes. DFGSP validé, 4e année (DFASP1) suivie.</p>
+                    </li>
+                    <li class="journey-step step-health" data-reveal>
+                        <span class="journey-marker" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#stethoscope"/></svg>
+                        </span>
+                        <p class="journey-date">2022 – 2025</p>
+                        <h3 data-i18n="journeyStepTwoTitle">Le terrain</h3>
+                        <p data-i18n="journeyStepTwoText">Officines et pharmacie hospitalière : patients, ordonnances, stocks, automatisation.</p>
+                    </li>
+                    <li class="journey-step step-digital" data-reveal>
+                        <span class="journey-marker" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#code"/></svg>
+                        </span>
+                        <p class="journey-date">2026 – 2027</p>
+                        <h3 data-i18n="journeyStepThreeTitle">Reconversion numérique</h3>
+                        <p data-i18n="journeyStepThreeText">Pré-MSc à Epitech Nantes : web, cybersécurité, cloud, systèmes, Java.</p>
+                    </li>
+                    <li class="journey-step step-digital" data-reveal>
+                        <span class="journey-marker" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#sparkles"/></svg>
+                        </span>
+                        <p class="journey-date">2027 – 2029</p>
+                        <h3 data-i18n="journeyStepFourTitle">MBA Santé, IA &amp; IoT</h3>
+                        <p data-i18n="journeyStepFourText">Deux ans à Epitech consacrés à la santé, à l'intelligence artificielle et aux objets connectés.</p>
+                    </li>
+                    <li class="journey-step step-goal" data-reveal>
+                        <span class="journey-marker" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#target"/></svg>
+                        </span>
+                        <p class="journey-date" data-i18n="journeyStepFiveDate">Objectif</p>
+                        <h3 data-i18n="journeyStepFiveTitle">Piloter des projets de santé numérique</h3>
+                        <p data-i18n="journeyStepFiveText">Chef de projet ou Product Owner, au plus près des soignants et des patients.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ OBJECTIF ============ -->
+        <section class="section section-tinted" id="objectif">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="goalKicker">Mon objectif</p>
+                    <h2 data-i18n="goalTitle">Faire le lien entre ceux qui soignent et ceux qui développent</h2>
+                    <p class="section-lead" data-i18n="goalLead">
+                        Un projet de santé numérique réussit quand les besoins du terrain sont
+                        bien compris par les équipes techniques. C'est ce rôle de traducteur
+                        que je veux occuper.
+                    </p>
+                </header>
+
+                <div class="bridge" data-reveal>
+                    <div class="bridge-side bridge-health">
+                        <span class="bridge-icon" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#stethoscope"/></svg>
+                        </span>
+                        <h3 data-i18n="bridgeHealthTitle">Professionnels de santé</h3>
+                        <p data-i18n="bridgeHealthText">Besoins du terrain, contraintes, sécurité du patient, usages réels.</p>
+                    </div>
+
+                    <div class="bridge-center">
+                        <span class="bridge-line" aria-hidden="true"></span>
+                        <div class="bridge-me">
+                            <img src="/caducee-pharmaceutique.svg" alt="" width="34" height="41">
+                            <h3 data-i18n="bridgeMeTitle">Mon rôle</h3>
+                            <p data-i18n="bridgeMeText">Comprendre, traduire, prioriser, piloter.</p>
+                        </div>
+                        <span class="bridge-line" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="bridge-side bridge-digital">
+                        <span class="bridge-icon" aria-hidden="true">
+                            <svg class="icon"><use href="/icons.svg#code"/></svg>
+                        </span>
+                        <h3 data-i18n="bridgeTechTitle">Équipes techniques</h3>
+                        <p data-i18n="bridgeTechText">Développement, données, sécurité, infrastructure.</p>
+                    </div>
+                </div>
+
+                <h3 class="subheading" data-reveal data-i18n="domainsTitle">Les domaines qui m'intéressent</h3>
+                <ul class="domain-grid">
+                    <li class="domain-card" data-reveal>
+                        <span class="domain-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#heart-pulse"/></svg></span>
+                        <h4 data-i18n="domainOneTitle">E-santé</h4>
+                        <p data-i18n="domainOneText">Des services numériques utiles aux patients et aux soignants, pensés à partir des usages réels.</p>
+                    </li>
+                    <li class="domain-card" data-reveal>
+                        <span class="domain-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#building"/></svg></span>
+                        <h4 data-i18n="domainTwoTitle">Transition numérique des établissements</h4>
+                        <p data-i18n="domainTwoText">Accompagner hôpitaux, cliniques et officines dans l'adoption de nouveaux outils, sans perdre de vue le soin.</p>
+                    </li>
+                    <li class="domain-card" data-reveal>
+                        <span class="domain-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#clipboard"/></svg></span>
+                        <h4 data-i18n="domainThreeTitle">Pilotage de projets</h4>
+                        <p data-i18n="domainThreeText">Coordonner les acteurs, planifier et suivre les étapes d'un projet de santé numérique.</p>
+                    </li>
+                    <li class="domain-card" data-reveal>
+                        <span class="domain-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#arrows"/></svg></span>
+                        <h4 data-i18n="domainFourTitle">Product Owner</h4>
+                        <p data-i18n="domainFourText">Recueillir les besoins des professionnels de santé et les traduire en priorités claires pour les développeurs.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ COMPÉTENCES ============ -->
+        <section class="section" id="competences">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="skillsKicker">Compétences</p>
+                    <h2 data-i18n="skillsTitle">Une double compétence santé et numérique</h2>
+                </header>
+
+                <div class="skills-grid">
+                    <article class="skill-card skill-health" data-reveal>
+                        <header class="skill-card-header">
+                            <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#pill"/></svg></span>
+                            <h3 data-i18n="skillsHealthTitle">Santé &amp; pharmacie</h3>
+                        </header>
+                        <ul class="check-list">
+                            <li data-i18n="healthSkillOne">Accueil, conseil et accompagnement des patients</li>
+                            <li data-i18n="healthSkillTwo">Suivi des dossiers patients et contrôle des ordonnances</li>
+                            <li data-i18n="healthSkillThree">Circuit du médicament en officine et en PUI</li>
+                            <li data-i18n="healthSkillFour">Gestion des stocks et des commandes</li>
+                            <li data-i18n="healthSkillFive">Robot de préparation des ordonnances</li>
+                            <li data-i18n="healthSkillSix">Vaccination, prévention et dépistage</li>
+                            <li data-i18n="healthSkillSeven">AFGSU niveau 2</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card skill-digital" data-reveal>
+                        <header class="skill-card-header">
+                            <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#code"/></svg></span>
+                            <h3 data-i18n="skillsDigitalTitle">Numérique</h3>
+                        </header>
+                        <h4 data-i18n="skillsLanguagesTitle">Langages &amp; frameworks</h4>
+                        <ul class="pill-list">
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>PHP</li><li>SQL</li><li>Python</li><li>Java</li><li>C</li>
+                        </ul>
+                        <h4 data-i18n="skillsDomainsTitle">Domaines</h4>
+                        <ul class="pill-list">
+                            <li data-i18n="skillCyber">Cybersécurité</li>
+                            <li data-i18n="skillData">Data</li>
+                            <li data-i18n="skillAI">IA</li>
+                            <li data-i18n="skillSysadmin">Systèmes &amp; réseaux</li>
+                            <li>AWS</li>
+                            <li>Google Cloud</li>
+                        </ul>
+                        <h4 data-i18n="skillsToolsTitle">Outils</h4>
+                        <ul class="pill-list">
+                            <li>Git</li><li>Vite</li><li>Word</li><li>Excel</li><li>PowerPoint</li><li>Outlook</li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card skill-soft" data-reveal>
+                        <header class="skill-card-header">
+                            <span class="skill-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#users"/></svg></span>
+                            <h3 data-i18n="skillsSoftTitle">Savoir-être</h3>
+                        </header>
+                        <ul class="check-list">
+                            <li data-i18n="softSkillOne">Rigueur scientifique</li>
+                            <li data-i18n="softSkillTwo">Analyse et résolution de problèmes</li>
+                            <li data-i18n="softSkillThree">Organisation et gestion des priorités</li>
+                            <li data-i18n="softSkillFour">Communication avec des publics variés</li>
+                            <li data-i18n="softSkillFive">Travail en équipe</li>
+                            <li data-i18n="softSkillSix">Adaptabilité et gestion du stress</li>
+                            <li data-i18n="softSkillSeven">Autonomie et esprit d'initiative</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="languages-card" data-reveal>
+                    <h3>
+                        <svg class="icon" aria-hidden="true"><use href="/icons.svg#languages"/></svg>
+                        <span data-i18n="languagesTitle">Langues</span>
+                    </h3>
+                    <ul class="language-list">
+                        <li>
+                            <span class="language-name" data-i18n="languageFrench">Français</span>
+                            <span class="language-meter" aria-hidden="true" style="--level: 6"></span>
+                            <span class="language-level" data-i18n="languageNative">Langue maternelle</span>
+                        </li>
+                        <li>
+                            <span class="language-name" data-i18n="languageEnglish">Anglais</span>
+                            <span class="language-meter" aria-hidden="true" style="--level: 6"></span>
+                            <span class="language-level">C2</span>
+                        </li>
+                        <li>
+                            <span class="language-name" data-i18n="languageSpanish">Espagnol</span>
+                            <span class="language-meter" aria-hidden="true" style="--level: 3"></span>
+                            <span class="language-level">B1</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPÉRIENCES ============ -->
+        <section class="section section-tinted" id="experiences">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="experienceKicker">Expériences</p>
+                    <h2 data-i18n="experienceTitle">Au contact des patients et des soignants</h2>
+                    <p class="section-lead" data-i18n="experienceLead">
+                        En officine comme à l'hôpital, j'ai vu de près ce qui fonctionne,
+                        ce qui freine et ce que les outils numériques peuvent changer.
+                    </p>
+                </header>
+
+                <div class="timeline">
+                    <article class="timeline-item" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">2023 – 2025</p>
+                            <p class="timeline-tag" data-i18n="contractPermanent">CDI</p>
+                        </div>
+                        <div class="timeline-card">
+                            <h3>Pharmacie des Bourderies</h3>
+                            <p class="timeline-place" data-i18n="placeCommunityNantes">Officine · Nantes</p>
+                            <p class="timeline-summary" data-i18n="experienceSummary">
+                                Un environnement exigeant qui demande rigueur, organisation et
+                                gestion simultanée de nombreuses demandes.
+                            </p>
+                            <ul class="dot-list">
+                                <li data-i18n="experienceOneTaskOne">Accueil, conseil et accompagnement des patients</li>
+                                <li data-i18n="experienceOneTaskTwo">Suivi des dossiers et contrôle des ordonnances</li>
+                                <li data-i18n="experienceOneTaskThree">Gestion des stocks, commandes et caisses</li>
+                                <li data-i18n="experienceOneTaskFour">Participation aux activités de vaccination, prévention et dépistage</li>
+                            </ul>
+                            <ul class="tag-list">
+                                <li data-i18n="skillAccuracy">Rigueur</li>
+                                <li data-i18n="skillOrganization">Organisation</li>
+                                <li data-i18n="skillPriorities">Gestion des priorités</li>
+                                <li data-i18n="skillUserRelations">Relation utilisateur</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">2022 – 2023</p>
+                            <p class="timeline-tag" data-i18n="contractInternshipThree">Stage 3e année · CDD</p>
+                        </div>
+                        <div class="timeline-card">
+                            <h3>Pharmacie de Poincaré</h3>
+                            <p class="timeline-place" data-i18n="placeCommunityNantes">Officine · Nantes</p>
+                            <ul class="dot-list">
+                                <li data-i18n="experienceTwoTaskOne">Accueil et conseil des patients</li>
+                                <li data-i18n="experienceTwoTaskTwo">Suivi des dossiers patients</li>
+                                <li data-i18n="experienceTwoTaskThree">Gestion des stocks, commandes et caisses</li>
+                                <li data-i18n="experienceTwoTaskFour">Utilisation et gestion du robot de préparation des ordonnances</li>
+                            </ul>
+                            <ul class="tag-list">
+                                <li data-i18n="skillOrganization">Organisation</li>
+                                <li data-i18n="skillProcedures">Procédures</li>
+                                <li data-i18n="skillAutomation">Outils automatisés</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date">2022</p>
+                            <p class="timeline-tag" data-i18n="contractInternshipFour">Stage 4e année</p>
+                        </div>
+                        <div class="timeline-card">
+                            <h3>Pharmacie de la Croix-Bonneau</h3>
+                            <p class="timeline-place" data-i18n="placeCommunityNantes">Officine · Nantes</p>
+                            <ul class="dot-list">
+                                <li data-i18n="experienceThreeTaskOne">Accueil et conseil des patients</li>
+                                <li data-i18n="experienceThreeTaskTwo">Délivrance des médicaments</li>
+                                <li data-i18n="experienceThreeTaskThree">Suivi des dossiers patients</li>
+                                <li data-i18n="experienceThreeTaskFour">Gestion des stocks et des commandes</li>
+                            </ul>
+                            <ul class="tag-list">
+                                <li data-i18n="skillAccuracy">Rigueur</li>
+                                <li data-i18n="skillOrganization">Organisation</li>
+                                <li data-i18n="skillPatientRelations">Relation patient</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item" data-reveal>
+                        <div class="timeline-meta">
+                            <p class="timeline-date" data-i18n="dateSummer2022">Été 2022</p>
+                            <p class="timeline-tag" data-i18n="contractHospital">CDD · Préparateur</p>
+                        </div>
+                        <div class="timeline-card">
+                            <h3>Clinique Jules Verne</h3>
+                            <p class="timeline-place" data-i18n="placeHospital">Pharmacie à usage intérieur (PUI) · Nantes</p>
+                            <ul class="dot-list">
+                                <li data-i18n="experienceFourTaskOne">Préparation des médicaments destinés aux différents services de la clinique</li>
+                                <li data-i18n="experienceFourTaskTwo">Rangement des médicaments et dispositifs médicaux dans les arsenaux des services</li>
+                            </ul>
+                            <ul class="tag-list">
+                                <li data-i18n="skillAccuracy">Rigueur</li>
+                                <li data-i18n="skillProcedureCompliance">Respect des procédures</li>
+                                <li data-i18n="skillOrganization">Organisation</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <details class="more-details" data-reveal>
+                    <summary data-i18n="moreExperienceSummary">Autres expériences professionnelles</summary>
+                    <p data-i18n="moreExperienceDescription">
+                        Grande distribution (CDD chez Intermarché en tant qu'employé polyvalent
+                        et drive), distribution de prospectus pour Andegave Société et service
+                        en restauration chez Dubrown Restaurant.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- ============ FORMATION ============ -->
+        <section class="section" id="formation">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="educationKicker">Formation</p>
+                    <h2 data-i18n="educationTitle">Des sciences pharmaceutiques au numérique</h2>
+                </header>
+
+                <div class="education-grid">
+                    <article class="education-card education-upcoming" data-reveal>
+                        <div class="education-top">
+                            <p class="education-date">2027 – 2029</p>
+                            <span class="status status-upcoming" data-i18n="statusUpcoming">À venir</span>
+                        </div>
+                        <h3 data-i18n="degreeMba">MBA Santé, IA &amp; IoT</h3>
+                        <p class="education-school">Epitech · Nantes</p>
+                        <p data-i18n="degreeMbaText">Deux ans consacrés aux usages du numérique en santé : intelligence artificielle, objets connectés et transformation des pratiques.</p>
+                    </article>
+
+                    <article class="education-card education-current" data-reveal>
+                        <div class="education-top">
+                            <p class="education-date">2026 – 2027</p>
+                            <span class="status status-current" data-i18n="statusCurrent">En cours</span>
+                        </div>
+                        <h3 data-i18n="degreePreMsc">Pré-MSc Informatique</h3>
+                        <p class="education-school">Epitech · Nantes</p>
+                        <p data-i18n="degreePreMscText">Une année intensive pour acquérir les fondamentaux du développement et des infrastructures.</p>
+                        <ul class="pill-list pill-list-small" aria-label="Modules suivis" data-i18n-aria="modulesLabel">
+                            <li>Web</li>
+                            <li data-i18n="moduleCyber">Cybersécurité</li>
+                            <li>AWS</li>
+                            <li>Google Cloud</li>
+                            <li>Sysadmin</li>
+                            <li data-i18n="moduleGame">Jeu 2D</li>
+                            <li>Java</li>
+                        </ul>
+                    </article>
+
+                    <article class="education-card education-past" data-reveal>
+                        <div class="education-top">
+                            <p class="education-date">2018 – 2025</p>
+                            <span class="status status-done" data-i18n="statusDone">Validé : DFGSP</span>
+                        </div>
+                        <h3 data-i18n="degreePharmacy">Études de pharmacie</h3>
+                        <p class="education-school" data-i18n="schoolPharmacy">Faculté de pharmacie · Université de Nantes</p>
+                        <p data-i18n="degreePharmacyText">Diplôme de formation générale en sciences pharmaceutiques (DFGSP, Bac+3) obtenu, puis 4e année (DFASP1) suivie avant ma réorientation vers le numérique.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PROJETS ============ -->
+        <section class="section section-tinted" id="projets">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="projectsKicker">Projets</p>
+                    <h2 data-i18n="projectsTitle">Apprendre en construisant</h2>
+                    <p class="section-lead" data-i18n="projectsLead">
+                        Chaque projet est l'occasion de mettre en pratique ce que j'apprends.
+                        D'autres viendront au fil de ma formation.
+                    </p>
+                </header>
+
+                <div class="project-grid">
+                    <article class="project-card" data-reveal>
+                        <div class="project-cover cover-hangman" aria-hidden="true">
+                            <span class="cover-word">_ A _ _ M A _</span>
+                            <svg class="icon cover-icon"><use href="/icons.svg#terminal"/></svg>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-type" data-i18n="projectOneType">Projet Python · Epitech</p>
+                            <h3 data-i18n="projectOneTitle">Hangman : construire un jeu de A à Z</h3>
+                            <p data-i18n="projectOneIntro">Un jeu du pendu qui a évolué d'un programme en terminal vers une application graphique avec Pygame.</p>
+                            <ul class="tag-list">
+                                <li>Python</li><li>Argparse</li><li>Pygame</li><li>Git</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="button button-primary button-small" href="./projets/hangman.html">
+                                    <span data-i18n="projectDetails">Voir le projet</span>
+                                    <span class="visually-hidden">Hangman</span>
+                                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg>
+                                </a>
+                                <a class="button button-ghost button-small" href="https://github.com/CharlesAbed/Hangman" target="_blank" rel="noopener">
+                                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg>
+                                    <span>GitHub</span>
+                                    <span class="visually-hidden">— Hangman</span>
+                                    <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="project-cover cover-cv" aria-hidden="true">
+                            <span class="cover-browser"><i></i><i></i><i></i></span>
+                            <img src="/caducee-pharmaceutique.svg" alt="" width="60" height="72">
+                        </div>
+                        <div class="project-body">
+                            <p class="project-type" data-i18n="projectTwoType">Projet personnel · Web</p>
+                            <h3 data-i18n="projectTwoTitle">Ce portfolio : mon terrain d'expérimentation</h3>
+                            <p data-i18n="projectTwoIntro">Un site bilingue et responsive qui évolue avec ma formation et raconte mon passage de la pharmacie au numérique.</p>
+                            <ul class="tag-list">
+                                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Vite</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="button button-primary button-small" href="./projets/cv-en-ligne.html">
+                                    <span data-i18n="projectDetails">Voir le projet</span>
+                                    <span class="visually-hidden"><span data-i18n="a11yProjectCv">CV en ligne</span></span>
+                                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg>
+                                </a>
+                                <a class="button button-ghost button-small" href="https://github.com/CharlesAbed/mon-CV-en-ligne" target="_blank" rel="noopener">
+                                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg>
+                                    <span>GitHub</span>
+                                    <span class="visually-hidden">— <span data-i18n="a11yProjectCv">CV en ligne</span></span>
+                                    <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="project-cover cover-alternatech" aria-hidden="true">
+                            <svg class="icon cover-icon"><use href="/icons.svg#briefcase"/></svg>
+                            <span class="cover-board"><i></i><i></i><i></i></span>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-type" data-i18n="projectThreeType">Projet en équipe · Développement web</p>
+                            <h3 data-i18n="projectThreeTitle">AlternaTech — plateforme de recherche d'emploi</h3>
+                            <p data-i18n="projectThreeIntro">Développement d'une plateforme de recrutement avec consultation d'annonces, candidatures, comptes utilisateurs, espace recruteur et administration, reposant sur une API PHP et une base de données MySQL.</p>
+                            <ul class="tag-list">
+                                <li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li>
+                            </ul>
+                            <div class="project-actions">
+                                <a class="button button-primary button-small" href="./projets/alternatech.html">
+                                    <span data-i18n="projectDetails">Voir le projet</span>
+                                    <span class="visually-hidden">AlternaTech</span>
+                                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg>
+                                </a>
+                                <a class="button button-ghost button-small" href="https://github.com/KananNuri/AlternaTech-JobBoard" target="_blank" rel="noopener">
+                                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg>
+                                    <span>GitHub</span>
+                                    <span class="visually-hidden">— AlternaTech</span>
+                                    <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CENTRES D'INTÉRÊT ============ -->
+        <section class="section section-compact" id="interets">
+            <div class="container">
+                <header class="section-header" data-reveal>
+                    <p class="section-kicker" data-i18n="interestsKicker">En dehors du travail</p>
+                    <h2 data-i18n="interestsTitle">Centres d'intérêt</h2>
+                </header>
+                <ul class="interest-grid">
+                    <li class="interest-card" data-reveal>
+                        <span class="interest-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#laptop"/></svg></span>
+                        <div>
+                            <h3 data-i18n="interestTechTitle">Informatique</h3>
+                            <p data-i18n="interestTechDescription">Développement, programmation et nouvelles technologies.</p>
+                        </div>
+                    </li>
+                    <li class="interest-card" data-reveal>
+                        <span class="interest-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#music"/></svg></span>
+                        <div>
+                            <h3 data-i18n="interestMusicTitle">Piano</h3>
+                            <p data-i18n="interestMusicDescription">20 ans de pratique. Cours donnés à des enfants et des adultes, du niveau débutant à intermédiaire.</p>
+                        </div>
+                    </li>
+                    <li class="interest-card" data-reveal>
+                        <span class="interest-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#gamepad"/></svg></span>
+                        <div>
+                            <h3 data-i18n="interestGamingTitle">Jeux vidéo</h3>
+                            <p data-i18n="interestGamingDescription">Stratégie, réflexion et univers vidéoludiques.</p>
+                        </div>
+                    </li>
+                    <li class="interest-card" data-reveal>
+                        <span class="interest-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#book"/></svg></span>
+                        <div>
+                            <h3 data-i18n="interestLearningTitle">Apprentissage</h3>
+                            <p data-i18n="interestLearningDescription">Découverte de nouvelles connaissances et développement personnel.</p>
+                        </div>
+                    </li>
+                    <li class="interest-card interest-card-wide" data-reveal>
+                        <span class="interest-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#trophy"/></svg></span>
+                        <div>
+                            <h3 data-i18n="interestSportTitle">Sport</h3>
+                            <ul class="sport-list">
+                                <li><strong data-i18n="sportFootball">Football</strong> <span data-i18n="sportFootballDetail">milieu de terrain à la Metallo de Chantenay</span></li>
+                                <li><strong data-i18n="sportTennis">Tennis</strong> <span data-i18n="sportTennisDetail">à l'Espoir de Chantenay</span></li>
+                                <li><strong data-i18n="sportBoxing">Boxe</strong> <span data-i18n="sportBoxingDetail">à La Nantaise</span></li>
+                                <li><strong class="sport-name-only" data-i18n="sportRowing">Aviron</strong></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section class="section section-contact" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-intro" data-reveal>
+                    <p class="section-kicker" data-i18n="contactKicker">Contact</p>
+                    <h2 data-i18n="contactTitle">Construisons ensemble les projets de santé de demain</h2>
+                    <p data-i18n="contactDescription">
+                        Je recherche une alternance de janvier à août 2027 en gestion de projet,
+                        analyse de données ou transformation numérique dans le secteur de la santé.
+                        Écrivez-moi, je vous réponds rapidement.
+                    </p>
+
+                    <ul class="contact-links">
+                        <li>
+                            <a href="mailto:charlesabed44@gmail.com">
+                                <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#mail"/></svg></span>
+                                <span>
+                                    <small data-i18n="labelEmail">E-mail</small>
+                                    charlesabed44@gmail.com
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/charles-abed/" target="_blank" rel="noopener">
+                                <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#linkedin"/></svg></span>
+                                <span>
+                                    <small>LinkedIn</small>
+                                    linkedin.com/in/charles-abed
+                                    <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/CharlesAbed" target="_blank" rel="noopener">
+                                <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#github"/></svg></span>
+                                <span>
+                                    <small>GitHub</small>
+                                    github.com/CharlesAbed
+                                    <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="contact-static">
+                                <span class="contact-icon" aria-hidden="true"><svg class="icon"><use href="/icons.svg#map-pin"/></svg></span>
+                                <span>
+                                    <small data-i18n="labelLocation">Localisation</small>
+                                    Nantes, France
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <form id="contact-form" class="contact-form" action="#" method="post" novalidate data-reveal>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="formName">Nom</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="formEmail">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" data-i18n="formSubject">Objet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="formMessage">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button class="button button-primary" type="submit">
+                        <span data-i18n="formSubmit">Envoyer le message</span>
+                        <svg class="icon" aria-hidden="true"><use href="/icons.svg#send"/></svg>
+                    </button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-brand">
+                <img src="/caducee-pharmaceutique.svg" alt="" width="20" height="24">
+                <span data-i18n="footerText">Charles ABED · De la pharmacie à la santé numérique · Nantes</span>
+            </p>
+            <a href="#accueil" class="footer-top">
+                <span data-i18n="backToTop">Retour en haut</span>
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-up"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./src/main.jsx"></script>
+</body>
+</html>

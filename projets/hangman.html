@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hangman, un jeu du pendu en Python réalisé à Epitech par Charles ABED : du terminal à l'interface graphique Pygame." data-i18n-content="hmMetaDescription">
+    <meta name="theme-color" content="#15803D">
+    <title>Hangman | Charles ABED</title>
+    <link rel="icon" type="image/svg+xml" href="/caducee-pharmaceutique.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body data-page="project" data-title-fr="Hangman | Charles ABED" data-title-en="Hangman | Charles ABED">
+    <a class="skip-link" href="#contenu" data-i18n="skipLink">Aller au contenu</a>
+    <div id="react-root"></div>
+
+    <header class="site-header">
+        <nav class="navigation container" aria-label="Navigation principale" data-i18n-aria="navigationLabel">
+            <a class="brand" href="../index.html" aria-label="Charles ABED — retour à l'accueil" data-i18n-aria="brandLabel">
+                <img class="brand-mark" src="/caducee-pharmaceutique.svg" alt="" width="28" height="34">
+                <span class="brand-name">Charles <strong>ABED</strong></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu" data-i18n-aria="menuOpen">
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#menu"/></svg>
+            </button>
+
+            <div class="nav-panel" id="menu-principal">
+                <ul class="nav-links">
+                    <li><a href="../index.html#parcours" data-i18n="navJourney">Parcours</a></li>
+                    <li><a href="../index.html#objectif" data-i18n="navGoal">Objectif</a></li>
+                    <li><a href="../index.html#competences" data-i18n="navSkills">Compétences</a></li>
+                    <li><a href="../index.html#experiences" data-i18n="navExperience">Expériences</a></li>
+                    <li><a href="../index.html#formation" data-i18n="navEducation">Formation</a></li>
+                    <li><a href="../index.html#projets" class="is-active" aria-current="page" data-i18n="navProjects">Projets</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="language-switch" role="group" aria-label="Choix de la langue" data-i18n-aria="languageGroup">
+                        <button type="button" data-language="fr" aria-pressed="true" aria-label="Passer le site en français" data-i18n-aria="switchToFrench">FR</button>
+                        <button type="button" data-language="en" aria-pressed="false" aria-label="Passer le site en anglais" data-i18n-aria="switchToEnglish">EN</button>
+                    </div>
+                    <a class="button button-primary button-small" href="../index.html#contact" data-i18n="navContact">Me contacter</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <section class="project-hero">
+            <div class="container">
+                <a class="back-link" href="../index.html#projets" data-hero>
+                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-left"/></svg>
+                    <span data-i18n="backToProjects">Tous les projets</span>
+                </a>
+                <p class="section-kicker" data-hero data-i18n="projectOneType">Projet Python · Epitech</p>
+                <h1 data-hero data-i18n="projectOneTitle">Hangman : construire un jeu de A à Z</h1>
+                <p class="section-lead" data-hero data-i18n="hmLead">
+                    Un projet qui m'a accompagné dans mes premiers pas en programmation,
+                    en évoluant progressivement d'un jeu en terminal vers une application graphique.
+                </p>
+                <dl class="project-facts" data-hero>
+                    <div>
+                        <dt data-i18n="factContext">Contexte</dt>
+                        <dd data-i18n="hmFactContext">Formation Epitech</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="factLanguage">Langage</dt>
+                        <dd>Python</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="factTools">Outils</dt>
+                        <dd>Argparse · Pygame · Git</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container project-layout">
+                <article class="prose">
+                    <h2 data-reveal data-i18n="hmStartTitle">Le point de départ</h2>
+                    <p data-reveal data-i18n="hmStartText">
+                        Le jeu du pendu paraît simple, mais il oblige à maîtriser les bases :
+                        boucles, conditions, gestion des entrées et organisation du code.
+                        C'était le terrain idéal pour apprendre, puis enrichir le programme
+                        étape par étape.
+                    </p>
+
+                    <h2 data-reveal data-i18n="hmStepsTitle">Les étapes du projet</h2>
+                    <ol class="steps">
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepOneTitle">La logique du jeu</h3>
+                            <p data-i18n="hmStepOneText">Choix du mot, lettres proposées, essais restants, conditions de victoire et de défaite.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepTwoTitle">Les entrées utilisateur</h3>
+                            <p data-i18n="hmStepTwoText">Lire et vérifier ce que saisit le joueur pour que le jeu reste fiable.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepThreeTitle">Une liste de mots externe</h3>
+                            <p data-i18n="hmStepThreeText">Charger les mots depuis un fichier plutôt que de les écrire dans le code.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepFourTitle">Des options au lancement</h3>
+                            <p data-i18n="hmStepFourText">Avec Argparse, plusieurs niveaux de personnalisation de la partie depuis la ligne de commande.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepFiveTitle">La gestion des erreurs</h3>
+                            <p data-i18n="hmStepFiveText">Fichier introuvable, saisie invalide : le programme réagit proprement au lieu de s'arrêter.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepSixTitle">Les meilleurs scores</h3>
+                            <p data-i18n="hmStepSixText">Un système pour enregistrer et afficher les meilleurs résultats.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="hmStepSevenTitle">L'interface graphique</h3>
+                            <p data-i18n="hmStepSevenText">Le passage du terminal à une vraie fenêtre de jeu réalisée avec Pygame.</p>
+                        </li>
+                    </ol>
+
+                    <h2 data-reveal data-i18n="takeawayTitle">Ce que j'en retiens</h2>
+                    <p data-reveal data-i18n="hmTakeaway">
+                        Ce projet m'a appris à faire évoluer un programme pas à pas, en ajoutant
+                        des fonctionnalités sans casser ce qui fonctionnait déjà. Partir d'une base
+                        simple, la livrer, puis l'améliorer : c'est aussi la démarche que je veux
+                        appliquer dans la conduite de projets numériques.
+                    </p>
+
+                    <a class="next-project" href="./cv-en-ligne.html" data-reveal>
+                        <span>
+                            <small data-i18n="nextProject">Projet suivant</small>
+                            <strong data-i18n="projectTwoTitle">Ce portfolio : mon terrain d'expérimentation</strong>
+                        </span>
+                        <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg>
+                    </a>
+                </article>
+
+                <aside class="project-aside" data-reveal>
+                    <div class="aside-card">
+                        <h2 data-i18n="asideCode">Code source</h2>
+                        <a class="button button-primary" href="https://github.com/CharlesAbed/Hangman" target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg>
+                            <span data-i18n="viewOnGitHub">Voir sur GitHub</span>
+                            <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                        </a>
+                    </div>
+                    <div class="aside-card">
+                        <h2 data-i18n="asideTech">Technologies</h2>
+                        <ul class="pill-list">
+                            <li>Python</li><li>Argparse</li><li>Pygame</li><li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="aside-card">
+                        <h2 data-i18n="asideSkills">Compétences travaillées</h2>
+                        <ul class="check-list">
+                            <li data-i18n="hmSkillOne">Algorithmique et logique</li>
+                            <li data-i18n="hmSkillTwo">Validation des entrées</li>
+                            <li data-i18n="hmSkillThree">Lecture de fichiers</li>
+                            <li data-i18n="hmSkillFour">Gestion des erreurs</li>
+                            <li data-i18n="hmSkillFive">Interface graphique</li>
+                            <li data-i18n="hmSkillSix">Versionnement avec Git</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-brand">
+                <img src="/caducee-pharmaceutique.svg" alt="" width="20" height="24">
+                <span data-i18n="footerText">Charles ABED · De la pharmacie à la santé numérique · Nantes</span>
+            </p>
+            <a href="#contenu" class="footer-top">
+                <span data-i18n="backToTop">Retour en haut</span>
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-up"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/script.js"></script>
+    <script type="module" src="../src/main.jsx"></script>
+</body>
+</html>

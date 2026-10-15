@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlternaTech, une plateforme de recherche d'emploi développée en binôme par Charles ABED : annonces, candidatures, comptes, espace recruteur et administration, avec une API PHP et une base MySQL." data-i18n-content="atMetaDescription">
+    <meta name="theme-color" content="#15803D">
+    <title>AlternaTech | Charles ABED</title>
+    <link rel="icon" type="image/svg+xml" href="/caducee-pharmaceutique.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body data-page="project" data-title-fr="AlternaTech | Charles ABED" data-title-en="AlternaTech | Charles ABED">
+    <a class="skip-link" href="#contenu" data-i18n="skipLink">Aller au contenu</a>
+    <div id="react-root"></div>
+
+    <header class="site-header">
+        <nav class="navigation container" aria-label="Navigation principale" data-i18n-aria="navigationLabel">
+            <a class="brand" href="../index.html" aria-label="Charles ABED — retour à l'accueil" data-i18n-aria="brandLabel">
+                <img class="brand-mark" src="/caducee-pharmaceutique.svg" alt="" width="28" height="34">
+                <span class="brand-name">Charles <strong>ABED</strong></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu" data-i18n-aria="menuOpen">
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#menu"/></svg>
+            </button>
+
+            <div class="nav-panel" id="menu-principal">
+                <ul class="nav-links">
+                    <li><a href="../index.html#parcours" data-i18n="navJourney">Parcours</a></li>
+                    <li><a href="../index.html#objectif" data-i18n="navGoal">Objectif</a></li>
+                    <li><a href="../index.html#competences" data-i18n="navSkills">Compétences</a></li>
+                    <li><a href="../index.html#experiences" data-i18n="navExperience">Expériences</a></li>
+                    <li><a href="../index.html#formation" data-i18n="navEducation">Formation</a></li>
+                    <li><a href="../index.html#projets" class="is-active" aria-current="page" data-i18n="navProjects">Projets</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="language-switch" role="group" aria-label="Choix de la langue" data-i18n-aria="languageGroup">
+                        <button type="button" data-language="fr" aria-pressed="true" aria-label="Passer le site en français" data-i18n-aria="switchToFrench">FR</button>
+                        <button type="button" data-language="en" aria-pressed="false" aria-label="Passer le site en anglais" data-i18n-aria="switchToEnglish">EN</button>
+                    </div>
+                    <a class="button button-primary button-small" href="../index.html#contact" data-i18n="navContact">Me contacter</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <section class="project-hero">
+            <div class="container">
+                <a class="back-link" href="../index.html#projets" data-hero>
+                    <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-left"/></svg>
+                    <span data-i18n="backToProjects">Tous les projets</span>
+                </a>
+                <p class="section-kicker" data-hero data-i18n="projectThreeType">Projet en équipe · Développement web</p>
+                <h1 data-hero data-i18n="projectThreeTitle">AlternaTech — plateforme de recherche d'emploi</h1>
+                <p class="section-lead" data-hero data-i18n="atLead">
+                    Un job board consacré aux offres tech en France, développé en binôme :
+                    une interface web, une API PHP et une base de données relationnelle
+                    qui relient candidats, recruteurs et administrateurs.
+                </p>
+                <dl class="project-facts" data-hero>
+                    <div>
+                        <dt data-i18n="factContext">Contexte</dt>
+                        <dd data-i18n="atFactContext">Projet en binôme</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="factStack">Stack</dt>
+                        <dd>PHP · MySQL · HTML · CSS · JavaScript</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="factTools">Outils</dt>
+                        <dd>PDO · Git · Node.js <span data-i18n="atFactToolsTests">(tests)</span></dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container project-layout">
+                <article class="prose">
+                    <h2 data-reveal data-i18n="atStartTitle">Le projet</h2>
+                    <p data-reveal data-i18n="atStartText">
+                        AlternaTech permet de consulter des offres d'emploi, d'y postuler et de
+                        les gérer côté recruteur. Le défi était de faire travailler ensemble
+                        plusieurs profils d'utilisateurs, chacun avec ses droits, autour d'une
+                        même base de données.
+                    </p>
+
+                    <h2 data-reveal data-i18n="atArchiTitle">Architecture</h2>
+                    <ol class="steps">
+                        <li data-reveal>
+                            <h3 data-i18n="atArchiOneTitle">Interface en HTML, CSS et JavaScript natifs</h3>
+                            <p data-i18n="atArchiOneText">Sans framework : les pages appellent l'API en JSON et affichent le détail d'une offre sans rechargement.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atArchiTwoTitle">API en PHP</h3>
+                            <p data-i18n="atArchiTwoText">Un routeur PHP sans framework, des requêtes SQL préparées avec PDO, des sessions, une protection CSRF et des contrôles d'accès vérifiés côté serveur.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atArchiThreeTitle">Base de données MySQL</h3>
+                            <p data-i18n="atArchiThreeText">Un schéma relationnel (comptes, profils, entreprises, catégories, annonces, candidatures…) avec des scripts d'installation et de migration.</p>
+                        </li>
+                    </ol>
+
+                    <h2 data-reveal data-i18n="atFeaturesTitle">Fonctionnalités implémentées</h2>
+                    <ol class="steps">
+                        <li data-reveal>
+                            <h3 data-i18n="atFeatureOneTitle">Consultation des annonces</h3>
+                            <p data-i18n="atFeatureOneText">Liste paginée avec filtres par mot-clé, lieu et catégorie, et détail de l'offre affiché à côté de la liste.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atFeatureTwoTitle">Candidatures</h3>
+                            <p data-i18n="atFeatureTwoText">Un bouton « Postuler » sur chaque offre : formulaire pour les visiteurs, profil réutilisé pour les utilisateurs connectés, doublons bloqués en base.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atFeatureThreeTitle">Comptes utilisateurs</h3>
+                            <p data-i18n="atFeatureThreeText">Inscription, connexion par e-mail et mot de passe, modification du profil et suivi de ses propres candidatures.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atFeatureFourTitle">Espace recruteur</h3>
+                            <p data-i18n="atFeatureFourText">Publication, modification et suppression des annonces de ses entreprises, consultation des candidats et mise à jour du statut des candidatures.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atFeatureFiveTitle">Administration</h3>
+                            <p data-i18n="atFeatureFiveText">Une page réservée aux administrateurs pour gérer toutes les tables, avec pagination et vérification des relations avant suppression.</p>
+                        </li>
+                        <li data-reveal>
+                            <h3 data-i18n="atFeatureSixTitle">Interface bilingue</h3>
+                            <p data-i18n="atFeatureSixText">Un sélecteur français / anglais qui s'appuie sur un dictionnaire commun au PHP et au JavaScript.</p>
+                        </li>
+                    </ol>
+
+                    <h2 data-reveal data-i18n="atRoleTitle">Ma contribution</h2>
+                    <p data-reveal data-i18n="atRoleText">
+                        Mon binôme a posé la structure du projet, la base de données, la liste
+                        publique des annonces et la connexion Google. De mon côté, j'ai développé
+                        la connexion par e-mail et mot de passe, la sécurisation des annonces par
+                        recruteur, le parcours de candidature, l'espace recruteur et les tests
+                        HTTP associés, puis j'ai participé à l'intégration finale.
+                    </p>
+
+                    <h2 data-reveal data-i18n="takeawayTitle">Ce que j'en retiens</h2>
+                    <p data-reveal data-i18n="atTakeaway">
+                        Travailler à deux sur le même code m'a appris à intégrer mon travail sans
+                        casser celui de l'autre, à m'appuyer sur des tests et à documenter les
+                        choix. Distinguer ce qui est réellement fait de ce qui reste à valider,
+                        c'est aussi une exigence du pilotage de projet.
+                    </p>
+
+                    <a class="next-project" href="./hangman.html" data-reveal>
+                        <span>
+                            <small data-i18n="nextProject">Projet suivant</small>
+                            <strong data-i18n="projectOneTitle">Hangman : construire un jeu de A à Z</strong>
+                        </span>
+                        <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-right"/></svg>
+                    </a>
+                </article>
+
+                <aside class="project-aside" data-reveal>
+                    <div class="aside-card">
+                        <h2 data-i18n="asideCode">Code source</h2>
+                        <a class="button button-primary" href="https://github.com/KananNuri/AlternaTech-JobBoard" target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="/icons.svg#github"/></svg>
+                            <span data-i18n="viewOnGitHub">Voir sur GitHub</span>
+                            <span class="visually-hidden" data-i18n="newTab">(s'ouvre dans un nouvel onglet)</span>
+                        </a>
+                    </div>
+                    <div class="aside-card">
+                        <h2 data-i18n="asideTech">Technologies</h2>
+                        <ul class="pill-list">
+                            <li>PHP</li><li>PDO</li><li>MySQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="aside-card">
+                        <h2 data-i18n="asideSkills">Compétences travaillées</h2>
+                        <ul class="check-list">
+                            <li data-i18n="atSkillOne">Conception d'une API en PHP</li>
+                            <li data-i18n="atSkillTwo">Modélisation d'une base de données relationnelle</li>
+                            <li data-i18n="atSkillThree">Authentification et gestion des droits</li>
+                            <li data-i18n="atSkillFour">Tests automatisés</li>
+                            <li data-i18n="atSkillFive">Travail en équipe avec Git</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-brand">
+                <img src="/caducee-pharmaceutique.svg" alt="" width="20" height="24">
+                <span data-i18n="footerText">Charles ABED · De la pharmacie à la santé numérique · Nantes</span>
+            </p>
+            <a href="#contenu" class="footer-top">
+                <span data-i18n="backToTop">Retour en haut</span>
+                <svg class="icon" aria-hidden="true"><use href="/icons.svg#arrow-up"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/script.js"></script>
+    <script type="module" src="../src/main.jsx"></script>
+</body>
+</html>
